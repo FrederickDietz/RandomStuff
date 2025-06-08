@@ -1,0 +1,10 @@
+import inspect
+
+def Q(S=False):
+    print("import inspect\n")
+    if S == False:
+        return Q
+    else:
+        return "print(inspect.getsource(Q(False))+Q(True))"
+        
+print(inspect.getsource(Q(False))+Q(True))
